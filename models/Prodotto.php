@@ -1,18 +1,20 @@
 <?php
-trait Prodotto
+include __DIR__.'/Categoria.php';
+include __DIR__.'/Tipologia.php';
+class Prodotto
 {
-    protected string $nome;
-    protected int $prezzo;
-    protected string $immagine;
-    protected string $icona;
+    use Categoria;
+
+    private string $nome;
+    private int $prezzo;
+    private string $immagine;
   
     
 
-    public function __construct(string $nome, int $prezzo, string $immagine, string $icona) {
+    public function __construct(string $nome, int $prezzo, string $immagine) {
         $this->nome = $nome;
         $this->prezzo = $prezzo;
         $this->immagine = $immagine;
-        $this->icona = $icona;
  
     }
 
@@ -37,15 +39,7 @@ trait Prodotto
         return $this->$immagine;
     }
     public function setImmagine(string $immagine):void{
-        $this->$immagine=$$immagine;
-    }
-    
-    // getter e setter di $icona
-    public function getIcona():string{
-        return $this->$icona;
-    }
-    public function setIcona(string $icona):void{
-        $this->$icona=$$icona;
+        $this->$immagine=$immagine;
     }
 
 
