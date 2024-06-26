@@ -1,11 +1,11 @@
 <?php
 include_once __DIR__.'/models/Prodotto.php';
 
+$prodotto1 = new Prodotto('crocchette', 15, 'src');
+$prodotto1->setTipo('cane');
+$prodotto1->setIcona('fas fa-dog');
+$prodotto1->setTipologia('cibo');
 
-
-
-var_dump (new Prodotto('supreme2000', 15, 'src', 'cane', 'icona cane', 'gioco'));
-var_dump (new Prodotto('sona45', 15, 'src', 'gatto', 'icona gatto', 'cuccia'));
 
 
 
@@ -38,6 +38,19 @@ var_dump (new Prodotto('sona45', 15, 'src', 'gatto', 'icona gatto', 'cuccia'));
             </div>
         </div>
     </header>
+    <main>
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                        <div class="card">
+                            <h3>
+                                <?php var_dump ( $prodotto1) ?>
+                            </h3>
+                        </div>
+                </div>
+            </div>
+        </div>
+    </main>
 
 
 
