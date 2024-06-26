@@ -1,10 +1,14 @@
 <?php
+include_once __DIR__.'/models/Cuccia.php';
+include_once __DIR__.'/models/Gioco.php';
+include_once __DIR__.'/models/Cibo.php';
+include_once __DIR__.'/models/Categoria.php';
+include_once __DIR__.'/models/Prodotto.php';
+include_once __DIR__.'/models/ListaProdotti.php';
 
 
 
-
-
-
+var_dump($prodotti);
 
 
 
