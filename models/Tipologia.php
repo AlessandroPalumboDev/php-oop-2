@@ -1,16 +1,17 @@
 <?php
-trait Tipologia
+class Tipologia 
 {
     protected string $tipologia;
 
 
+    // getter e setter di tipologia
     public function __construct(string $_tipologia) {
         $this->tipologia = $_tipologia;
  
     }
 
     // getter e setter di tipologia
-    public function setTipo(string $_tipologia): void
+    public function setTipologia(string $_tipologia): void
     {
         $this->tipologia = $_tipologia;
     }

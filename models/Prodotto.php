@@ -1,9 +1,7 @@
 <?php
-include __DIR__.'/Categoria.php';
-include __DIR__.'/Tipologia.php';
-class Prodotto
+include_once __DIR__.'/Categoria.php';
+class Prodotto extends Categoria
 {
-    use Categoria;
 
     private string $nome;
     private int $prezzo;
@@ -41,6 +39,12 @@ class Prodotto
     public function setImmagine(string $immagine):void{
         $this->$immagine=$immagine;
     }
+
+
+
+
+
+
 
 
 }

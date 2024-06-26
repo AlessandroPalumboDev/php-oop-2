@@ -1,5 +1,7 @@
 <?php
-trait Categoria
+include_once __DIR__.'/Tipologia.php';
+
+class Categoria extends Tipologia
 {
     protected string $tipo;
     protected string $icona;
@@ -8,8 +10,8 @@ trait Categoria
     public function __construct(string $_tipo, string $_icona) {
         $this->tipo = $_tipo;
         $this->icona = $_icona;
- 
     }
+
 
     // getter e setter di tipo
     public function setTipo(string $_tipo): void
@@ -31,5 +33,8 @@ trait Categoria
     {
         return $this->icona;
     }
+
+
+
 }
 ?>
