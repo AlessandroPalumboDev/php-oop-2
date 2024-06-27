@@ -1,51 +1,57 @@
 <?php
-include_once __DIR__.'/Categoria.php';
-class Prodotto extends Categoria
+require_once __DIR__.'/Categoria.php';
+class Prodotto 
+// extends Categoria
 {
 
     private string $nome;
-    private int $prezzo;
-    private string $immagine;
+    private float $prezzo = 0;
+    private Categoria $categoria;
   
     
 
-    public function __construct(string $nome, int $prezzo, string $immagine) {
-        $this->nome = $nome;
-        $this->prezzo = $prezzo;
-        $this->immagine = $immagine;
+    public function __construct(string $nome, Categoria $categoria) {
+        $this->setNome($nome);
+        // $this->setCategoria($categoria);
  
     }
 
     // getter e setter di $nome
-    public function getNome():string{
-        return $this->$nome;
+    public function getNome(): string
+    {
+        return $this->nome;
     }
     public function setNome(string $nome):void{
-        $this->$nome=$$nome;
+        $this->$nome=$nome;
     }
 
     // getter e setter di $prezzo
-    public function getPrezzo():int{
+    public function getPrezzo():float{
         return $this->$prezzo;
     }
-    public function setPrezzo(int $prezzo):void{
-        $this->$prezzo=$$prezzo;
+    public function setPrezzo(float $prezzo):void{
+        $this->$prezzo=$prezzo;
     }
 
     // getter e setter di $immagine
-    public function getImmagine():string{
+    public function getImmagine():?string{
         return $this->$immagine;
     }
     public function setImmagine(string $immagine):void{
         $this->$immagine=$immagine;
     }
 
-
-
-
-
-
+    // getter e setter di $categoria
+    public function getCategoria():?Categoria{
+        return $this->$categoria;
+    }
+    public function setCategoria(Categoria $categoria):void{
+        $this->$categoria = $categoria;
+    }
 
 
 }
+
+
+
 ?>

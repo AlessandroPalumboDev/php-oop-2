@@ -1,7 +1,6 @@
 <?php
-include_once __DIR__.'/Tipologia.php';
 
-class Categoria extends Tipologia
+class Categoria 
 {
     protected string $tipo;
     protected string $icona;
